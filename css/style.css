@@ -1,0 +1,27 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  list-style: none;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+/* ------------------HEADER-------------------------------------------------- */
+
+.container-flex {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 30%;
+  height: 30%;
+}
