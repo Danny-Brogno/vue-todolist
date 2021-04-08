@@ -15,18 +15,42 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- MY JS -->
     <script src="js/script.js"></script>
-    <title>Todolist with vue</title>
+    <title>To-do list with vue</title>
   </head>
 
-  <body id="dannyVue">
+  <body>
 
-    <header class="container-flex">
-      <img :src="url" alt="logo-img">
+  <section id="dannyVue">
+
+
+    <header>
+
+      <div class="container-flex padTop">
+        <img :src="url" alt="logo-img">
+      </div>
+
     </header>
 
     <main>
 
+      <div class="container-flex padTop">
+        <input v-model="newTodo" @keyup.enter="createNewToDo" type="text" id="dannyInput" required minlength="2" maxlength="50" size="50" placeholder="New to-do">
+        <button @click="createNewToDo" class="fas fa-times">Add</button>
+      </div>
+
+      <div class="container-flex padTop grey-container">
+        <ul v-if="todos.length > 0">
+          <li v-for="(todo, index) in todos">
+            {{ todo }}
+            <i @click="clickDeleteTodo(index)" class="fas fa-times"></i>
+          </li>
+        </ul>
+        <h2 v-else>There is nothing to-do :-)</h2>
+      </div>
+
     </main>
+
+  </section>
 
   </body>
 </html>
