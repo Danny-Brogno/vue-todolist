@@ -35,15 +35,16 @@
 
       <div class="container-flex padTop">
         <input v-model="newTodo" @keyup.enter="createNewToDo" type="text" id="dannyInput" required minlength="2" maxlength="50" size="50" placeholder="New to-do">
+        <!-- V MODEL MAKES ME CREATE THE ELEMENT AT LINE  26 OF JS -->
         <button @click="createNewToDo" class="fas fa-times">Add to-do</button>
       </div>
 
-      <div class="container-flex grey-container">
+      <div class="grey-container">
         <ul v-if="todos.length > 0">
           <li v-for="(todo, index) in todos">
             {{ todo }}
-            <i @click="clickDeleteTodo(index)" class="pad-top single-element fas fa-times"></i>
             <hr>
+            <i @click="clickDeleteTodo(index)" class="pad-top fas fa-times"></i>
           </li>
         </ul>
         <h2 v-else>There is nothing to-do :-)</h2>

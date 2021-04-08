@@ -42,21 +42,39 @@ header img {
 }
 
 main button {
+  border-radius: 5px;
   width: 100px;
   height: 50px;
   margin-left: 20px;
-  background-color: grey;
+  background-color: #001533;
   color: lime;
+  cursor: pointer;
 }
 
 .grey-container {
   min-height: 200px;
-  border-radius: 10px;
-  background-color: grey;
+  border-radius: 5px;
+  background-color: #001533;
   color: lime;
   margin: 100px 700px;
 }
 
-.single-element {
 
+.grey-container li {
+  font-size: 25px;
+  font-weight: bolder;
+  line-height: 200%;
+  position: relative;
+}
+
+.grey-container .fa-times {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  animation: gira-la-ruota 2s linear infinite;
+}
+
+@keyframes gira-la-ruota {
+  0% {transform: rotate(1turn);}
 }
