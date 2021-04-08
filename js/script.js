@@ -16,6 +16,9 @@ function vueFunction() {
     data: {
       "url": "img/boolean-logo.png",
 
+      // ANIMATION IN FOOTER
+      show: true,
+
       "todos": [
         "Grocery shopping",
         "Go to the gym",
@@ -31,8 +34,8 @@ function vueFunction() {
       createNewToDo: function() {
 
         if(this.newTodo.length > 0) {
-          this.todos.push(this.newTodo);
-          this.newTodo = "";
+          this.todos.push(this.newTodo); // this pushes the conent of the input into the array at line 22 of JS
+          this.newTodo = ""; // this vacates the input once tou click the button or press enter (normally the text would stay there)
         } else {
           console.log("you haven't written anything :-(");
         }

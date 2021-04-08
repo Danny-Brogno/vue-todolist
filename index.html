@@ -52,6 +52,25 @@
 
     </main>
 
+    <footer>
+
+      <div id="dannyBtn">
+        <button v-on:click="show = !show">Press me</button>
+      </div>
+
+      <transition name="fade">
+        <ul v-if="show" class="container-flex by-danny bounce">
+          <li>b</li>
+          <li>y</li>
+          <li>D</li>
+          <li>a</li>
+          <li>n</li>
+          <li>n</li>
+          <li>y</li>
+        </ul>
+      </transition>
+    </footer>
+
   </section>
 
   </body>

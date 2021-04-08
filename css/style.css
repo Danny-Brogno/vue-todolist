@@ -21,12 +21,12 @@ li {
   padding-top: 20px;
 }
 
-/* ------------------------------HEADER-------------------------------------- */
-
 .container-flex {
   display: flex;
   justify-content: center;
 }
+
+/* ------------------------------HEADER-------------------------------------- */
 
 header img {
   width: 30%;
@@ -49,6 +49,7 @@ main button {
   background-color: #001533;
   color: lime;
   cursor: pointer;
+  border: none;
 }
 
 .grey-container {
@@ -72,9 +73,59 @@ main button {
   right: 10px;
   top: 10px;
   cursor: pointer;
-  animation: gira-la-ruota 2s linear infinite;
+  animation: rotation 5s linear infinite;
 }
 
-@keyframes gira-la-ruota {
-  0% {transform: rotate(1turn);}
+@keyframes rotation {
+  0% {text-shadow: 0 0 purple;}
+  25% {text-shadow: 1px 0 purple, 2px 0 purple, 3px 0 purple, 4px 0 purple, 5px 0 purple; }
+  50% {text-shadow: 0 0 purple;}
+  75% {text-shadow: -1px 0 gold, -2px 0 gold, -3px 0 gold, -4px 0 gold, -5px 0 gold; }
+  100% {text-shadow: 0 0 gold;}
+
+  from {transform: rotateY(0deg);}
+  to {transform: rotateY(-360deg);}
+}
+
+
+/* --------------------------FOOTER------------------------------------------ */
+#dannyBtn {
+  display: flex;
+  justify-content: center;
+}
+
+#dannyBtn button {
+  width: 70px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #001533;
+  color: lime;
+}
+
+.by-danny {
+  color: #001533;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.by-danny li {
+  display: inline;
+}
+
+.by-danny li:nth-child(1),
+.by-danny li:nth-child(2) {
+  color: lime;
+}
+
+.by-danny li:nth-child(2) {
+  margin-right: 20px;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
 }
