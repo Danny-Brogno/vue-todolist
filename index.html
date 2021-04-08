@@ -35,19 +35,19 @@
 
       <div class="container-flex padTop">
         <input v-model="newTodo" @keyup.enter="createNewToDo" type="text" id="dannyInput" required minlength="2" maxlength="50" size="50" placeholder="New to-do">
-        <!-- V MODEL MAKES ME CREATE THE ELEMENT AT LINE  26 OF JS -->
+        <!-- V MODEL MAKES ME CREATE THE ELEMENT AT LINE  29 OF JS -->
         <button @click="createNewToDo" class="fas fa-times">Add to-do</button>
       </div>
 
       <div class="grey-container">
-        <ul v-if="todos.length > 0">
+        <ul v-if="todos.length > 0"> <!-- This is the IF condition (array with more than 0)-->
           <li v-for="(todo, index) in todos">
             {{ todo }}
             <hr>
-            <i @click="clickDeleteTodo(index)" class="pad-top fas fa-times"></i>
+            <i @click="clickDeleteTodo(index)" class="pad-top fas fa-times"></i> <!-- Pressing the "X icon we delete the to-do selected"-->
           </li>
         </ul>
-        <h2 v-else>There is nothing to-do :-)</h2>
+        <h2 v-else>There is nothing to-do :-)</h2> <!-- This is the ELSE condition (if the condition at line 37 of html does not apply)-->
       </div>
 
     </main>

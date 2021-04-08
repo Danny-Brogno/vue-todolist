@@ -42,7 +42,7 @@ function vueFunction() {
       }, // END OF createNewToDo FUNCTION
 
       clickDeleteTodo: function(index) {
-        this.todos.splice(index, 1);   // The splice() method adds/removes items to/from an array, and returns the removed item(s).
+        this.todos.splice(index, 1);   // The splice() method adds/removes items to/from an array, and returns the removed item(s). In this case we select THIS particular "X" icon (clicked by the user) and we delete it
       }
     } // END OF METHODS
 
