@@ -17,10 +17,10 @@ function vueFunction() {
       "url": "img/boolean-logo.png",
 
       "todos": [
-        "to-do 1",
-        "to-do 2",
-        "to-do 10",
-        "to-do 7",
+        "Grocery shopping",
+        "Go to the gym",
+        "Walk the dog",
+        "Make dinner",
       ],
 
       newTodo: ""
@@ -32,12 +32,14 @@ function vueFunction() {
 
         if(this.newTodo.length > 0) {
           this.todos.push(this.newTodo);
-          this.newTodo = " ";
-        } // END OF IF
-
+          this.newTodo = "";
+        } else {
+          console.log("you haven't written anything :-(");
+        }
       }, // END OF createNewToDo FUNCTION
+
       clickDeleteTodo: function(index) {
-        this.todos.splice(index, 1);
+        this.todos.splice(index, 1);   // The splice() method adds/removes items to/from an array, and returns the removed item(s).
       }
     } // END OF METHODS
 
